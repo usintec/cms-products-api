@@ -29,8 +29,7 @@ class ProductController extends Controller
             'name' => 'required|string',
             'slug' => 'required|string',
             'category_id' => 'required',
-            'price' => 'required'
-        
+            'price' => 'required',        
         ]);
         //store product in the databse
         return Product::create($request->all());

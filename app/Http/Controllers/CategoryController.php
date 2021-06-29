@@ -1,11 +1,13 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Http\Library\apiHelpers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    use apiHelpers;
     /**
      * Display a listing of the resource.
      *
@@ -25,12 +27,17 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'slug' => 'required|string',
-        ]);
-        //store a category
-        return Category::create($request->all());
+        if($this->isAdmin(auth()->user())){
+            $request->validate([
+                'name' => 'required|string',
+                'slug' => 'required|string',
+            ]);
+            //store a category
+            $category = Category::create($request->all());
+            return $this->onSuccess('success', $category, 200);
+        } 
+        return $this->onError('Unauthourized', 401);
+       
     }
 
     /**
@@ -54,12 +61,16 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //update a category
-        $category = Category::find($id);
-        if($category){
-            $category->update($request->all());
+        if($this->isAdmin(auth()->user())){
+            //update a category
+            $category = Category::find($id);
+            if($category){
+                $category->update($request->all());
+            }
+            return $this->onSuccess('success', $category, 200);
         }
-        return $category;
+        return $this->isError('Unauthourized', 401);
+      
     }
 
     /**
@@ -70,7 +81,12 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //delete category
-        return Category::destroy($id);
+        if($this->isAdmin(auth()->user())){
+            //delete category
+            $res = Category::destroy($id);
+            return $this->onSuccess('success', $res, 200);
+        }
+        return $this->onError('Unauthourized', 401);
+
     }
 }
