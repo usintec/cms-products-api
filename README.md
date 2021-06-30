@@ -68,3 +68,5 @@ Authentication published url: https://documenter.getpostman.com/view/5921529/Tzk
 Category published url: https://documenter.getpostman.com/view/5921529/TzkyLzaY
 Product published url: https://documenter.getpostman.com/view/5921529/TzkyLzac
 Project Video : https://drive.google.com/drive/folders/1Ko-9n1rsXWC1gc_0U4Asp7jJGf9fM3BL?usp=sharing
+github url: https://github.com/usintec/cms-products-api
+github repo: https://github.com/usintec/cms-products-api.git
