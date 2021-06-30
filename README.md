@@ -1,62 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+0. INTRODUCTION
+    -url: https://drive.google.com/drive/folders/1GvA1BPSLqy1jNzEVUNmzZmW6I1mb6sw1?usp=sharing
+1. SETTING UP COMPUTER FOR LARAVEL DEVELOPMENT
+	-PHP
+	-COMPOSER
+	-MYSQL/SQLITE
+    -url: https://drive.google.com/drive/folders/19v_Ye_8ZBDOK3HJXhxPeno_e3aDMGwWa?usp=sharing
+2. CREATING A PROJECT
+    -url: https://drive.google.com/drive/folders/1ZtqwMURLUbI2TFd9ZEtmmmu6zt8vB1Ax?usp=sharing
+3. ADDING PROJECT TO REPOSITORY
+    -url: https://drive.google.com/drive/folders/1LHRlLBf3USkOKBMHovTVOkx4A5UbWMax?usp=sharing
+4. CREATING MODELS
+    url: https://drive.google.com/drive/folders/1qUtqIughKZJYjP4pjgCgL3S7VGH9Si2e?usp=sharing
+5. CREATING CONTROLLERS
+    url: https://drive.google.com/drive/folders/194pNP1nkGZ5VKCrSJdKBmiglnrkbLW_m?usp=sharing
+6. CREATING ROUTES
+7. AUTHENTICATION
+	a. setting up auth system
+    a-url: https://drive.google.com/drive/folders/1y3jLunNZxBMSkcv8ZmS0ilLvXwJZVj6t?usp=sharing
+	b. creating AuthController 
+    b-url: https://drive.google.com/drive/folders/1dFSFdJ9IavGLQ0odEwEdvSnuKR1CIUY8?usp=sharing 
+8. ROLE BASED API or Authourization
+    url: https://drive.google.com/drive/folders/1IFOK9JXZoALGtgfT_JJKhYFNodrSvc11?usp=sharing
+9. TESTING
+10. DOCUMENTATION
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Models
+	CATEGORY
+		-id
+		-name
+		-slug
+		-description
+	PRODUCT
+		-id
+		-category_id
+		-name
+		-slug
+		-price
+		-description
+		-image
+	USER
+		-id
+		-name
+		-email
+		-password
+		-role
 
-## About Laravel
+Admin
+	C - CREATE CATEGORY (POST REQUEST)
+	R - READ A CATEGORY (READ REQUEST)
+	U - UPDATE CATEGORY (PUT REQUEST)
+	D - DELETE CATEGORY (DELETE REQUEST)
+	
+		
+	C - CREATE PRODUCT (POST REQUEST)
+	R - READ A PRODUCT (READ REQUEST)
+	U - UPDATE PRODUCT (PUT REQUEST)
+	D - DELECT PRODUCT (DELETE REQUEST)
+USER
+	R - READ CATEGORY (GET REQUEST)
+	R - READ ALL PRODUCTS (GET REQUEST)
+	R - READ PRODUCT BY CATEGORY NAME (GET REQUEST)
+	R - READ PRODUCT BY ID (GET REQUEST)
+	R - SEARCH FOR PRODUCT (GET REQUEST)
+	
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Authentication published url: https://documenter.getpostman.com/view/5921529/TzkyLzaV
+Category published url: https://documenter.getpostman.com/view/5921529/TzkyLzaY
+Product published url: https://documenter.getpostman.com/view/5921529/TzkyLzac
+Project Video : https://drive.google.com/drive/folders/1Ko-9n1rsXWC1gc_0U4Asp7jJGf9fM3BL?usp=sharing
